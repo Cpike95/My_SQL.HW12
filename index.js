@@ -210,9 +210,9 @@ function addRole() {
             // add this data to the roles table jpined 
             const role = [ data.role, data.money];
             const roleId = rolesArr.length + 1;
-            const newRole = new Role(roleId, role);
+            const newRole = new Role(data.role, data.money);
 
-            const sql = `INSERT INTO role (salary, title) VALUES ?  `;
+            const sql = `INSERT INTO role (title, salary) VALUES (?)  `;
             connection.query(sql, newRole, (err, res) => {
                if (err) throw err;
                
@@ -222,7 +222,7 @@ function addRole() {
                 // } 
                     console.log("New employee added.")
 
-                roles.push(newRole)
+                rolesArr.push(newRole)
                 console.table(res);
                 
                 start();

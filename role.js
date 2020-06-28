@@ -2,9 +2,8 @@
 const department = require('./department');
 
 class Role {
-    constructor( title, salary, department_id) {
+    constructor( title, salary, ) {
 
-        this.department_id = department_id;
         this.title = title;
         this.salary =salary;
     }
