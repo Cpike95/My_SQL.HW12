@@ -2,12 +2,12 @@
 const department = require('./department');
 
 class Role {
-    constructor(id, title, salary) {
-        super(department_id)
+    constructor( title, salary, department_id) {
 
-        this.id = id;
+        this.department_id = department_id;
         this.title = title;
         this.salary =salary;
     }
 }
 
+module.exports = Role;
