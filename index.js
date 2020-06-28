@@ -212,7 +212,7 @@ function addRole() {
             const roleId = rolesArr.length + 1;
             const newRole = new Role(roleId, role);
 
-            const sql = `INSERT INTO role (salary, title) VALUES ? ? `;
+            const sql = `INSERT INTO role (salary, title) VALUES ?  `;
             connection.query(sql, newRole, (err, res) => {
                if (err) throw err;
                
@@ -270,7 +270,7 @@ function addEmployee() {
          ])
         .then(data => {
             //  add this data to the roles table jpined 
-            
+
             const employee = new Employee( data.firstname, data.lastname );
             const sql = `INSERT INTO employee (first_name, last_name) VALUES ( ?)`
             
